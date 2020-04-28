@@ -40,16 +40,18 @@ class ViewController: UIViewController {
         self.setupGridView()
         
         
-        DATA()
+        DATA(pageCount: pageCount)
         
         
     }
     
-    func DATA() {
+    func DATA(pageCount: Int) {
         
         isDataLoading = true
         
-        let  Url = URL(string: "https://reqres.in/api/users?page=1")
+        let stringURL = "https://reqres.in/api/users?page=\(pageCount)"
+        
+        let  Url = URL(string: stringURL)
         Alamofire.request(Url!).validate().responseJSON { (response) in
             if ((response.result.value) != nil) {
                 
