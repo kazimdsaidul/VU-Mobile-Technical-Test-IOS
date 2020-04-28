@@ -8,6 +8,8 @@ target 'VU-Mobile-Technical-Test-IOS' do
   # Pods for VU-Mobile-Technical-Test-IOS
   pod 'SwiftyJSON', '4.0.0'
   pod 'Alamofire','4.5.1'
+  pod 'SDWebImage', '5.0'
+
   # pod 'EVReflection/Alamofire'
 
 

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SDWebImage
+
 
 class ItemCell: UICollectionViewCell {
 
@@ -20,12 +22,11 @@ class ItemCell: UICollectionViewCell {
         
         let fileUrl = URL(string: name)
 
-        self.uiImageView.load(url: fileUrl!)
+        self.uiImageView.sd_setImage(with: fileUrl, placeholderImage: UIImage(named: "placeholder.png"))
+
     }
 
 }
-
-
 extension UIImageView {
     func load(url: URL) {
         DispatchQueue.global().async { [weak self] in

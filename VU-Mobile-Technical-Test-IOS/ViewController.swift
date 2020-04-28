@@ -19,13 +19,11 @@ class ViewController: UIViewController {
     var pageCount:Int = 1 // Pass this page number in your api
     
     var data1 = [String]()
-//    let dataArray = [String]()
     
     var estimateWidth = 160.0
     var cellMarginSize = 16.0
     
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,7 +36,6 @@ class ViewController: UIViewController {
         
         // SetupGrid view
         self.setupGridView()
-        
         
         DATA(pageCount: pageCount)
         
@@ -55,13 +52,11 @@ class ViewController: UIViewController {
         Alamofire.request(Url!).validate().responseJSON { (response) in
             if ((response.result.value) != nil) {
                 
-                
                 let jsondata = JSON(response.result.value!)
                 print(jsondata)
                 if let da = jsondata["data"].arrayObject
                 {
-                    
-            
+                
                     for obj in da {
                         if let dict = obj as? NSDictionary {
                             // Now reference the data you need using:
@@ -70,14 +65,17 @@ class ViewController: UIViewController {
                         }
                     }
                     
-                
                 }
                 if self.data1.count > 0 {
                     self.collectionView?.reloadData()
+                    self.pageCount = self.pageCount+1
+                }else{
+                   self.pageCount = self.pageCount-1
+                    
+
                 }
                 
                 self.isDataLoading = false
-                
             }
         }
     }
@@ -116,17 +114,14 @@ extension ViewController: UICollectionViewDataSource {
         return cell
     }
     
-    public  func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        if (!decelerate) {
-            //cause by user
-            print("SCROLL scrollViewDidEndDragging")
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if (indexPath.row == data1.count - 1 ) { //it's your last cell
+            //Load more data & reload your collection view
+            DATA(pageCount: pageCount)
         }
     }
+  
     
-    public  func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        //caused by user
-        print("SCROLL scrollViewDidEndDecelerating")
-    }
 }
 
 extension ViewController: UICollectionViewDelegateFlowLayout {
