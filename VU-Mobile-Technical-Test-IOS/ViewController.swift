@@ -114,6 +114,10 @@ extension ViewController: UICollectionViewDataSource {
         return cell
     }
     
+    
+    
+    
+    
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if (indexPath.row == data1.count - 1 ) { //it's your last cell
             //Load more data & reload your collection view
@@ -138,6 +142,17 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
         let width = (self.view.frame.size.width - CGFloat(cellMarginSize) * (cellCount - 1) - margin) / cellCount
         
         return width
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "DetailsViewController") as? DetailsViewController
+        vc?.url = data1[indexPath.row]
+        self.navigationController?.pushViewController(vc!, animated: true)
+        
+        
+        
     }
     
     
