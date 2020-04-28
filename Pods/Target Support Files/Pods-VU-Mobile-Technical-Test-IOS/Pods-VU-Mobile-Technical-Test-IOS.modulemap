@@ -1,0 +1,6 @@
+framework module Pods_VU_Mobile_Technical_Test_IOS {
+  umbrella header "Pods-VU-Mobile-Technical-Test-IOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

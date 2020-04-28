@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4EF8C75BB4B180ACD3ADA2B6 /* Pods_VU_Mobile_Technical_Test_IOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2D4BBD6FFC54C10596B867 /* Pods_VU_Mobile_Technical_Test_IOS.framework */; };
+		84006AE72458A6BC00C88AB3 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84006AE62458A6BC00C88AB3 /* DetailsViewController.swift */; };
 		847B38A02457E01C00FD675C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B389F2457E01C00FD675C /* AppDelegate.swift */; };
 		847B38A22457E01C00FD675C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B38A12457E01C00FD675C /* ViewController.swift */; };
 		847B38A52457E01C00FD675C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847B38A32457E01C00FD675C /* Main.storyboard */; };
 		847B38A72457E01C00FD675C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847B38A62457E01C00FD675C /* Assets.xcassets */; };
 		847B38AA2457E01C00FD675C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847B38A82457E01C00FD675C /* LaunchScreen.storyboard */; };
+		84AB844924586AFA007803D7 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB844724586AFA007803D7 /* ItemCell.swift */; };
+		84AB844A24586AFA007803D7 /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84AB844824586AFA007803D7 /* ItemCell.xib */; };
+		84AB844D24588215007803D7 /* ImagesRespose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB844C24588215007803D7 /* ImagesRespose.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1FDF39A7CD01A8A93DE15284 /* Pods-VU-Mobile-Technical-Test-IOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VU-Mobile-Technical-Test-IOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-VU-Mobile-Technical-Test-IOS/Pods-VU-Mobile-Technical-Test-IOS.release.xcconfig"; sourceTree = "<group>"; };
+		2BC4C978E1FDB984E87E64E7 /* Pods-VU-Mobile-Technical-Test-IOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VU-Mobile-Technical-Test-IOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VU-Mobile-Technical-Test-IOS/Pods-VU-Mobile-Technical-Test-IOS.debug.xcconfig"; sourceTree = "<group>"; };
+		84006AE62458A6BC00C88AB3 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		847B389C2457E01C00FD675C /* VU-Mobile-Technical-Test-IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VU-Mobile-Technical-Test-IOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		847B389F2457E01C00FD675C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		847B38A12457E01C00FD675C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +30,10 @@
 		847B38A62457E01C00FD675C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		847B38A92457E01C00FD675C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		847B38AB2457E01C00FD675C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84AB844724586AFA007803D7 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		84AB844824586AFA007803D7 /* ItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
+		84AB844C24588215007803D7 /* ImagesRespose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesRespose.swift; sourceTree = "<group>"; };
+		FC2D4BBD6FFC54C10596B867 /* Pods_VU_Mobile_Technical_Test_IOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VU_Mobile_Technical_Test_IOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +41,45 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EF8C75BB4B180ACD3ADA2B6 /* Pods_VU_Mobile_Technical_Test_IOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36120D66D1C2E3EBC2BCF8FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC2D4BBD6FFC54C10596B867 /* Pods_VU_Mobile_Technical_Test_IOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6AA0C8117DC6CEB3FB17865F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2BC4C978E1FDB984E87E64E7 /* Pods-VU-Mobile-Technical-Test-IOS.debug.xcconfig */,
+				1FDF39A7CD01A8A93DE15284 /* Pods-VU-Mobile-Technical-Test-IOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		84006AE52458A68000C88AB3 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				84006AE62458A6BC00C88AB3 /* DetailsViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		847B38932457E01C00FD675C = {
 			isa = PBXGroup;
 			children = (
 				847B389E2457E01C00FD675C /* VU-Mobile-Technical-Test-IOS */,
 				847B389D2457E01C00FD675C /* Products */,
+				6AA0C8117DC6CEB3FB17865F /* Pods */,
+				36120D66D1C2E3EBC2BCF8FB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,7 +94,10 @@
 		847B389E2457E01C00FD675C /* VU-Mobile-Technical-Test-IOS */ = {
 			isa = PBXGroup;
 			children = (
+				84006AE52458A68000C88AB3 /* UI */,
+				84AB844B245881EA007803D7 /* Model */,
 				847B389F2457E01C00FD675C /* AppDelegate.swift */,
+				84AB844624586A88007803D7 /* ItemCell */,
 				847B38A12457E01C00FD675C /* ViewController.swift */,
 				847B38A32457E01C00FD675C /* Main.storyboard */,
 				847B38A62457E01C00FD675C /* Assets.xcassets */,
@@ -64,6 +107,23 @@
 			path = "VU-Mobile-Technical-Test-IOS";
 			sourceTree = "<group>";
 		};
+		84AB844624586A88007803D7 /* ItemCell */ = {
+			isa = PBXGroup;
+			children = (
+				84AB844724586AFA007803D7 /* ItemCell.swift */,
+				84AB844824586AFA007803D7 /* ItemCell.xib */,
+			);
+			path = ItemCell;
+			sourceTree = "<group>";
+		};
+		84AB844B245881EA007803D7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84AB844C24588215007803D7 /* ImagesRespose.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +131,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 847B38AE2457E01C00FD675C /* Build configuration list for PBXNativeTarget "VU-Mobile-Technical-Test-IOS" */;
 			buildPhases = (
+				49E04E909DE544F3D9B19437 /* [CP] Check Pods Manifest.lock */,
 				847B38982457E01C00FD675C /* Sources */,
 				847B38992457E01C00FD675C /* Frameworks */,
 				847B389A2457E01C00FD675C /* Resources */,
+				B3D3AF6E6AC8299554694EE6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +185,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84AB844A24586AFA007803D7 /* ItemCell.xib in Resources */,
 				847B38AA2457E01C00FD675C /* LaunchScreen.storyboard in Resources */,
 				847B38A72457E01C00FD675C /* Assets.xcassets in Resources */,
 				847B38A52457E01C00FD675C /* Main.storyboard in Resources */,
@@ -131,13 +194,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		49E04E909DE544F3D9B19437 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VU-Mobile-Technical-Test-IOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3D3AF6E6AC8299554694EE6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-VU-Mobile-Technical-Test-IOS/Pods-VU-Mobile-Technical-Test-IOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VU-Mobile-Technical-Test-IOS/Pods-VU-Mobile-Technical-Test-IOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		847B38982457E01C00FD675C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				847B38A22457E01C00FD675C /* ViewController.swift in Sources */,
+				84AB844D24588215007803D7 /* ImagesRespose.swift in Sources */,
 				847B38A02457E01C00FD675C /* AppDelegate.swift in Sources */,
+				84AB844924586AFA007803D7 /* ItemCell.swift in Sources */,
+				84006AE72458A6BC00C88AB3 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +381,7 @@
 		};
 		847B38AF2457E01C00FD675C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BC4C978E1FDB984E87E64E7 /* Pods-VU-Mobile-Technical-Test-IOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +397,7 @@
 		};
 		847B38B02457E01C00FD675C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FDF39A7CD01A8A93DE15284 /* Pods-VU-Mobile-Technical-Test-IOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
