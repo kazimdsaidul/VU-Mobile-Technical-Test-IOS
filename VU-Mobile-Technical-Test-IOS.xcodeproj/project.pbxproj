@@ -12,6 +12,8 @@
 		847B38A52457E01C00FD675C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847B38A32457E01C00FD675C /* Main.storyboard */; };
 		847B38A72457E01C00FD675C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847B38A62457E01C00FD675C /* Assets.xcassets */; };
 		847B38AA2457E01C00FD675C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847B38A82457E01C00FD675C /* LaunchScreen.storyboard */; };
+		84AB844924586AFA007803D7 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB844724586AFA007803D7 /* ItemCell.swift */; };
+		84AB844A24586AFA007803D7 /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84AB844824586AFA007803D7 /* ItemCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		847B38A62457E01C00FD675C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		847B38A92457E01C00FD675C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		847B38AB2457E01C00FD675C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84AB844724586AFA007803D7 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		84AB844824586AFA007803D7 /* ItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				847B389F2457E01C00FD675C /* AppDelegate.swift */,
+				84AB844624586A88007803D7 /* ItemCell */,
 				847B38A12457E01C00FD675C /* ViewController.swift */,
 				847B38A32457E01C00FD675C /* Main.storyboard */,
 				847B38A62457E01C00FD675C /* Assets.xcassets */,
@@ -62,6 +67,15 @@
 				847B38AB2457E01C00FD675C /* Info.plist */,
 			);
 			path = "VU-Mobile-Technical-Test-IOS";
+			sourceTree = "<group>";
+		};
+		84AB844624586A88007803D7 /* ItemCell */ = {
+			isa = PBXGroup;
+			children = (
+				84AB844724586AFA007803D7 /* ItemCell.swift */,
+				84AB844824586AFA007803D7 /* ItemCell.xib */,
+			);
+			path = ItemCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84AB844A24586AFA007803D7 /* ItemCell.xib in Resources */,
 				847B38AA2457E01C00FD675C /* LaunchScreen.storyboard in Resources */,
 				847B38A72457E01C00FD675C /* Assets.xcassets in Resources */,
 				847B38A52457E01C00FD675C /* Main.storyboard in Resources */,
@@ -138,6 +153,7 @@
 			files = (
 				847B38A22457E01C00FD675C /* ViewController.swift in Sources */,
 				847B38A02457E01C00FD675C /* AppDelegate.swift in Sources */,
+				84AB844924586AFA007803D7 /* ItemCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
