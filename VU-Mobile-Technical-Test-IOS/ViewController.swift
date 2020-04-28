@@ -6,16 +6,25 @@
 //  Copyright © 2020 Kazi Md. Saidul. All rights reserved.
 //
 
+
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let dataArray = ["AAA", "BBB", "CCC", "DDD", "EEE", "FFF", "GGG"]
+    var isDataLoading = false
+    var pageCount:Int = 1 // Pass this page number in your api
+    
+    var data1 = [String]()
+//    let dataArray = [String]()
     
     var estimateWidth = 160.0
     var cellMarginSize = 16.0
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +38,49 @@ class ViewController: UIViewController {
         
         // SetupGrid view
         self.setupGridView()
+        
+        
+        DATA()
+        
+        
     }
+    
+    func DATA() {
+        
+        isDataLoading = true
+        
+        let  Url = URL(string: "https://reqres.in/api/users?page=1")
+        Alamofire.request(Url!).validate().responseJSON { (response) in
+            if ((response.result.value) != nil) {
+                
+                
+                let jsondata = JSON(response.result.value!)
+                print(jsondata)
+                if let da = jsondata["data"].arrayObject
+                {
+                    
+            
+                    for obj in da {
+                        if let dict = obj as? NSDictionary {
+                            // Now reference the data you need using:
+                            let avatar = dict.value(forKey: "avatar")
+                            self.data1.append(avatar as! String)
+                        }
+                    }
+                    
+                
+                }
+                if self.data1.count > 0 {
+                    self.collectionView?.reloadData()
+                }
+                
+                self.isDataLoading = false
+                
+            }
+        }
+    }
+    
+    
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -46,19 +97,33 @@ class ViewController: UIViewController {
         flow.minimumInteritemSpacing = CGFloat(self.cellMarginSize)
         flow.minimumLineSpacing = CGFloat(self.cellMarginSize)
     }
+    
+    
 }
 
 extension ViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.dataArray.count
+        return self.data1.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCell", for: indexPath) as! ItemCell
-        cell.setData(name: self.dataArray[indexPath.row])
+        cell.setData(name: self.data1[indexPath.row])
         
         return cell
+    }
+    
+    public  func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if (!decelerate) {
+            //cause by user
+            print("SCROLL scrollViewDidEndDragging")
+        }
+    }
+    
+    public  func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        //caused by user
+        print("SCROLL scrollViewDidEndDecelerating")
     }
 }
 
@@ -77,5 +142,7 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
         
         return width
     }
+    
+    
 }
 

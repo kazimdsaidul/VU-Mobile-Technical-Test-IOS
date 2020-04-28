@@ -11,15 +11,31 @@ import UIKit
 class ItemCell: UICollectionViewCell {
 
     @IBOutlet weak var uiImageView: UIImageView!
-    @IBOutlet weak var uiLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
     }
     
     func setData(name: String)  {
-        self.uiLabel.text = name
+        
+        let fileUrl = URL(string: name)
+
+        self.uiImageView.load(url: fileUrl!)
     }
 
+}
+
+
+extension UIImageView {
+    func load(url: URL) {
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self?.image = image
+                    }
+                }
+            }
+        }
+    }
 }

@@ -19,31 +19,21 @@
                 <rect key="frame" x="0.0" y="0.0" width="264" height="229"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="npJ-1a-M9W">
-                        <rect key="frame" x="0.0" y="16" width="264" height="20.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XDM-ES-9fX">
-                        <rect key="frame" x="8" y="50" width="248" height="171"/>
+                        <rect key="frame" x="8" y="8" width="248" height="213"/>
                     </imageView>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="npJ-1a-M9W" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Czx-eI-Iw0"/>
-                <constraint firstItem="npJ-1a-M9W" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="JBe-bE-dWA"/>
-                <constraint firstItem="XDM-ES-9fX" firstAttribute="top" secondItem="npJ-1a-M9W" secondAttribute="bottom" constant="13.5" id="MP4-AW-Th5"/>
                 <constraint firstAttribute="trailing" secondItem="XDM-ES-9fX" secondAttribute="trailing" constant="8" id="NDr-eP-hPU"/>
                 <constraint firstItem="XDM-ES-9fX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="RpP-Fd-KSp"/>
+                <constraint firstItem="XDM-ES-9fX" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="gAV-v9-wYa"/>
                 <constraint firstAttribute="bottom" secondItem="XDM-ES-9fX" secondAttribute="bottom" constant="8" id="vi8-Gq-iCu"/>
-                <constraint firstAttribute="trailing" secondItem="npJ-1a-M9W" secondAttribute="trailing" id="xc1-7T-iZp"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="264" height="229"/>
             <connections>
                 <outlet property="uiImageView" destination="XDM-ES-9fX" id="D86-9H-bKb"/>
-                <outlet property="uiLabel" destination="npJ-1a-M9W" id="RCx-vZ-cXD"/>
             </connections>
             <point key="canvasLocation" x="141" y="143.5"/>
         </collectionViewCell>
